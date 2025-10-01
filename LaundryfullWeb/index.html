@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <title>Laundry Services</title>
+</head>
+<body>
+   <header class="container">
+        <div class="left">
+            <img src="data:image/jpeg;base64,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" alt="Logo"></src>
+        </div>
+    <div class="we">
+        <a href="#home" class="box">Homes</a>
+        <a href="#Service" class="box">Services</a>
+        <a href="#aboutus" class="box">About Us</a>
+        <a href="#contactus" class="box">Contact Us</a>
+    </div>
+    <div class="right">Username</div>
+   </header>
+   <section class="intro">
+ <div class="hero" id="home">
+    <div class="left1">
+        <h1 id="qq">Revitalize Your <br> Clothes With Experts</h1>
+        <h1 id="rr">Laundry Services!</h1>
+        <p>From premium dry cleaning to swift wash and fold, we deliver care and convinience.<br>  Schedule a pickup and rediscover the freshness of your clothes today!</p>
+        <a href="#Service" class="book"><ion-icon name="ticket-outline"></ion-icon> Book a service today!</a>
+    </div>
+    <div class="right1">
+         <img src="https://png.pngtree.com/png-vector/20240322/ourmid/pngtree-home-service-house-cleaning-and-laundry-wash-png-image_12190003.png" alt="laundryimage">
+    </div>
+ </div>
+ </section>
+ <section class="achievements">
+   <div class="ss">
+    <div class="sl">
+    <h1>Our Achievements</h1>
+    </div>
+    </div>
+    <div class="ss">
+    <div class="sr">
+        <p>15+ <br>Laundry Services</p>     
+    </div>
+    <div class="sr">
+        <p>240+ <br>Happy Customers</p>   
+    </div>
+    <div class="sr">
+        <p>2+ Years <br>Experience</p>
+    </div>
+   </div>
+ </section>
+
+  <section class="Services" id="Service">
+    <main class="leftbar">
+        <h1>Our Services</h1>
+        <h4>Click On The Add To Cart Button To Add The Services To Your Cart</h4>
+        <hr>
+        <div id="service-list" class="service-list">
+            <ul class="ssss">
+                <li class="sss" id="space">
+                    <div class="info">
+                 <div >
+                    Dry Cleaning
+                </div>
+                <div class="price">
+                    ₹ 200.00s
+                </div>
+                    </div>
+                <button class="st">
+                    Add Item <ion-icon class="plus" name="add-circle-outline"></ion-icon>
+                </button>
+                </li>
+                 <li class="sss">
+                    <div class="info"><div>
+                    Wash & fold
+                </div>
+                <div class="price">
+                    ₹ 100.00
+                </div>
+                </div>
+                <button class="st">
+                    Add Item <ion-icon class="plus" name="add-circle-outline"></ion-icon>
+                </button>
+                 </li>
+                 <li class="sss">
+                    <div class="info"><div>
+                    Ironing
+                </div>
+                <div class="price">
+                    ₹ 30.00
+                </div>
+                </div>
+                <button class="st">
+                    Add Item <ion-icon class="plus" name="add-circle-outline"></ion-icon>
+                </button>
+                 </li>
+                 <li class="sss">
+                    <div class="info"><div>
+                   Stain Removal
+                </div>
+                <div class="price">
+                    ₹ 500.00
+                </div>
+                </div>
+                <button class="st">
+                    Add Item <ion-icon class="plus" name="add-circle-outline"></ion-icon>
+                </button>
+                 </li>
+                 <li class="sss">
+                    <div class="info"><div>
+                    Leather & Suede Cleaning
+                </div>
+                <div class="price">
+                    ₹ 999.00
+                </div>
+                </div>
+                <button class="st">
+                    Add Item <ion-icon class="plus" name="add-circle-outline"></ion-icon>
+                </button>
+                 </li>
+                 <li class="sss">
+                    <div class="info"><div>
+                   Wedding Dress Cleaning
+                </div>
+                <div class="price">
+                    ₹ 2800.00
+                </div>
+                </div>
+                <button class="st">
+                    Add Item <ion-icon class="plus" name="add-circle-outline"></ion-icon>
+                </button>
+                 </li>
+            </ul>
+        </div>
+        <hr>
+        <div class="lastline">
+           <ion-icon id="logo" name="alert-circle-outline"></ion-icon>   Add the items to the cart and book now 
+        </div>
+    </main>
+
+    <aside class="rightbar">
+        <div class="rightbar-top">
+        <h2>Added Items</h2>
+        <hr>
+        <div class="headings">
+            <div class="head-row">
+                <div>
+                    <span>
+                    S.No.
+                </span>
+                <span>
+                    Service Name
+                </span>
+                </div>
+                <span>
+                    Price
+                </span>
+            </div>
+        </div>
+        <div class="cart-list" id="cart-list"></div>
+        <div class="cart-empty" id="cart-empty"><ion-icon id="logo1" name="alert-circle-outline"></ion-icon><br>
+        <strong id="w1">No Items Added</strong> <br> <strong id="w2"> Add items to the cart from services bar</strong></div>
+         <hr>
+        <div id="totals">
+            <div class="total-row">
+                <span>
+                    Total Amount
+                </span>
+                <span id="price">
+                    ₹ 0.00
+                </span>
+            </div>
+        </div>
+      </div>
+
+      <div class="rightbar-bottom">
+        <h3>Book Now</h3>
+        <hr>
+        <form id="checkout-form">
+            <div class="row22">
+            <div>
+                <label for="name">Full Name</label><br>
+                <input type="text" id="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-row">
+            <div>
+                <label for="phone">Phone Number</label><br>
+                <input type="tel" id="phone" placeholder="0000000000" required>
+            </div>
+            <div>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" placeholder="valid@gmail.com" required>
+            </div>
+            </div>
+            <div>
+                <button type="submit" id="order-btn">Book Now</button>
+            </div>
+            </div>
+        </form>
+        <div id="msg"></div>
+        </div>
+    </aside>
+  </section>
+
+  <section class="quality-section" id="aboutus">
+    <div class="tt">
+      <div>
+        <ion-icon class="it" name="rocket-outline"></ion-icon>
+        <h2>Premium Services</h2>
+        <p>Elevate your wardrobe with our meticulous dry cleaning.ensuring garments look and feel as good as new.</p>
+      </div>
+        <div>
+        <ion-icon class="it" name="bulb-outline"></ion-icon>
+        <h2>Quick Support</h2>
+        <p>We're committed to providing prompt solutions to ensure your experience is smooth and worry-free.</p>
+      </div>
+      <div>
+        <ion-icon class="it" name="briefcase-outline"></ion-icon>
+        <h2>Hassle Free Delivery</h2>
+        <p>Enjoy seamless service with our convinent pickup and delivery options,tailored to your schedule.</p>
+      </div>
+      <div>
+        <ion-icon class="it" name="pricetag-outline"></ion-icon>
+        <h2>Affordable Prices</h2>
+        <p>Experience exceptional care without breaking the bank-our affordable prices make laundry day stress-free.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter" id="contactus">
+    <div class="ss kk">
+        <div class="news">
+    <h1>Subscribe to our <br> newsletter.</h1>
+    </div>
+    <div class="uu">
+        <div>
+            <input type="text" placeholder="Full name" required>
+            <input type="email" placeholder="Email" required>
+        </div>
+        <div>
+            <button type="submit">Subscribe</button>
+        </div>
+    </div>
+    </div> 
+  </section>
+  
+  <footer class="footer">
+    <div>
+        <div><h1>Logo</h1></div>
+        <div class="dd">
+            <h3>About Us</h3>
+            <p>LaundryWalah makes laundry <br> simple and hassle-free.</p>
+        </div>
+    </div>
+    <div id="clm">
+        <h3>Important Links</h3>
+        <a href="#aboutus" class="box">About Us</a>
+        <a href="#contactus" class="box">Contact Us</a>
+        <a href="#Service" class="box">Privacy Policy</a>
+        <a href="#Service" class="box">Terms of use</a>
+        <a href="#Service" class="box">Refund Policy</a>
+    </div>
+    <div class="pp">
+        <h3>Contact</h3>
+        <p>mail@site.com</p>
+        <p>+91 9123456780</p>
+    </div>
+    <div id="hh">
+        <h3>Follow Us</h3>
+        <a  href=""><ion-icon class="fb" name="logo-instagram"></ion-icon></a>
+        <a  href=""><ion-icon class="tw" name="logo-facebook"></ion-icon></a>
+        <a  href=""><ion-icon class="gg" name="logo-twitter"></ion-icon></a>
+        <a  href=""><ion-icon class="is" name="logo-youtube"></ion-icon></a>
+    </div>
+  </footer>
+
+ <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "ukpciSgoRV9MVyPqy",
+      });
+   })();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<script src="resources/jss/script.js"></script>
+</body>
+</html>
