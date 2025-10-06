@@ -344,7 +344,11 @@ function resetForm() {
     updateButtonsVisibility(); // This ensures add/remove buttons reset properly
     
     setTimeout(() => {
-        showMessage('Thank you for choosing our laundry service!', 'success');
+        showMessage(   '<span style="display: inline-flex; align-items: center; gap: 6px;">' +
+      '<ion-icon name="alert-circle-outline" style="font-size: 18px; vertical-align: middle; color: green;"></ion-icon>' +
+      '<span>Email has been sent successfully!</span>' +
+    '</span>',
+    'success');
     }, 1000);
 }
 
@@ -386,3 +390,4 @@ function showMessage(message, type) {
 window.removeFromCart = removeFromCart;
 
 console.log('Cart script loaded successfully!');
+
