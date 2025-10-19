@@ -303,32 +303,56 @@ function prepareEmailData(name, phone, email) {
         booking_time: new Date().toLocaleTimeString()
     };
 }
-
-// Send email using EmailJS
+    
+// Send two emails: one to admin and one to customer
 function sendEmail(emailData) {
     const button = document.getElementById('order-btn');
-    
+
     // Show loading
     button.textContent = 'Sending...';
     button.disabled = true;
-    
-    // Replace these with your actual EmailJS IDs
-    const serviceID = 'service_q85ijzb';  // Replace with your service ID
-    const templateID = 'template_eytjg7l'; // Replace with your template ID
-    
-    emailjs.send(serviceID, templateID, emailData)
+
+    // Your EmailJS service ID and templates
+    const serviceID = 'service_q85ijzb';   // keep your existing service ID
+    const adminTemplateID = 'template_eytjg7l'; // admin email template (you already have)
+    const customerTemplateID = 'template_e19b3yc'; // new customer confirmation template
+
+    // Add your admin email manually so EmailJS sends to you
+    const adminEmailData = {
+        ...emailData,
+        to_email: 'yourEmail@example.com' // Replace with your own email ID
+    };
+
+    // Send to Admin first
+    emailjs.send(serviceID, adminTemplateID, adminEmailData)
         .then(function(response) {
-            console.log('Email sent successfully!', response);
-            showMessage('Order placed successfully! We will contact you soon.', 'success');
+            console.log('Admin email sent successfully!', response);
+
+            // Now send confirmation to Customer
+            return emailjs.send(serviceID, customerTemplateID, emailData);
+        })
+        .then(function(response) {
+            console.log('Customer confirmation email sent successfully!', response);
+
+            // Show success message
+            showMessage(
+                '<span style="display: inline-flex; align-items: center; gap: 6px;">' +
+                '<ion-icon name="checkmark-circle-outline" style="font-size: 18px; vertical-align: middle; color: green;"></ion-icon>' +
+                '<span>Order placed successfully! Confirmation email sent.</span>' +
+                '</span>',
+                'success'
+            );
+
             resetForm();
         })
         .catch(function(error) {
             console.error('Email failed to send:', error);
-            showMessage('Failed to send order. Please try again or call us directly.', 'error');
+            showMessage('Failed to send email. Please try again or contact support.', 'error');
             button.textContent = 'Book Now';
             button.disabled = false;
         });
 }
+
 
 // Reset form and cart after successful booking
 function resetForm() {
@@ -344,7 +368,7 @@ function resetForm() {
     updateButtonsVisibility(); // This ensures add/remove buttons reset properly
     
     setTimeout(() => {
-        showMessage(   '<span style="display: inline-flex; align-items: center; gap: 6px;">' +
+        showMessage(    '<span style="display: inline-flex; align-items: center; gap: 6px;">' +
       '<ion-icon name="alert-circle-outline" style="font-size: 18px; vertical-align: middle; color: green;"></ion-icon>' +
       '<span>Email has been sent successfully!</span>' +
     '</span>',
@@ -390,4 +414,3 @@ function showMessage(message, type) {
 window.removeFromCart = removeFromCart;
 
 console.log('Cart script loaded successfully!');
-
